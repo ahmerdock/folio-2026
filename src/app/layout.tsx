@@ -4,6 +4,7 @@ import { Footer, Header, Preloader } from "@/layout";
 import "./globals.css";
 import { ReactNode } from "react";
 import { Analytics } from "@vercel/analytics/next";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import { CustomCursor, SmoothScroll } from "@/components";
 
 const bebasNeue = Bebas_Neue({
@@ -96,6 +97,7 @@ export default function RootLayout({
         {children}
         {/* <Footer /> */}
         <Analytics />
+        <SpeedInsights />
       </body>
     </html>
   );
