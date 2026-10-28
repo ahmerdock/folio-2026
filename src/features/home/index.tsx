@@ -5,9 +5,9 @@ export default function Home() {
     <main>
       <Hero />
       <AboutMe />
-      <Progress />
+      {/* <Progress />
       <Steps />
-      <FeaturedWorks />
+      <FeaturedWorks /> */}
     </main>
   );
 }

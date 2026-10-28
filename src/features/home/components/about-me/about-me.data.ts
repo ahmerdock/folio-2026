@@ -1,11 +1,11 @@
 import { WHATSAPP_LINK } from "@/constants";
 
-export const ABOUT_CAPTION_PREFIX = "Currently ";
-export const ABOUT_CAPTION_EMPHASIS = "(taking)";
-export const ABOUT_CAPTION_SUFFIX = " new Projects";
+export const ABOUT_CAPTION_PREFIX = "Something ";
+export const ABOUT_CAPTION_EMPHASIS = "(new)";
+export const ABOUT_CAPTION_SUFFIX = " is loading";
 
 export const ABOUT_TITLE =
-  "IF YOU HAVE AN IDEA THAT NEEDS TO BECOME A REAL PRODUCT AND SOMEONE TO BUILD IT, LET'S TALK";
+  "GOOD NEWS, MY NEW SITE IS COMING SOON, BAD NEWS, YOU'RE EARLY";
 export const ABOUT_CTA_LABEL = "WHATSAPP NOW";
 export const ABOUT_CTA_HREF = WHATSAPP_LINK;
 

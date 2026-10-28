@@ -93,7 +93,7 @@ export default function RootLayout({
         <Preloader />
         <Header />
         {children}
-        <Footer />
+        {/* <Footer /> */}
       </body>
     </html>
   );
