@@ -6,9 +6,8 @@ export const PRIVACY_CAPTION_EMPHASIS = "(Android)";
 export const PRIVACY_CAPTION_SUFFIX = " App";
 
 export const PRIVACY_TITLE = "Privacy Policy";
-export const PRIVACY_LAST_UPDATED = "October 28, 2026";
+export const PRIVACY_LAST_UPDATED = "October 29, 2026";
 
-// Swap for the real address before publishing the app.
 export const PRIVACY_CONTACT_EMAIL = "contact.ahmerdock@gmail.com";
 
 export const PRIVACY_INTRO =
@@ -16,7 +15,7 @@ export const PRIVACY_INTRO =
 
 export const PRIVACY_SUMMARY_LABEL = "In short";
 export const PRIVACY_SUMMARY =
-  "Pay Slice does not collect, store on a server, or share your personal data.";
+  "Pay Slice does not collect your personal information. Each time you open it, it sends one anonymous launch event, described below.";
 
 export const PRIVACY_SECTIONS: IPolicySection[] = [
   {
@@ -30,11 +29,11 @@ export const PRIVACY_SECTIONS: IPolicySection[] = [
     listIntro: "Pay Slice does not:",
     list: [
       "require an account or login",
-      "collect your name, email address, location, contacts, photos or device identifiers",
-      "use analytics, crash reporting or advertising services",
+      "collect your name, email address, location, contacts, photos, or hardware or advertising identifiers",
+      "use advertising or crash-reporting services",
       "show ads",
       "track you across apps or websites",
-      "sell or share data with third parties",
+      "sell your data or share it with third parties, other than the anonymous launch event described below",
     ],
   },
   {
@@ -46,19 +45,25 @@ export const PRIVACY_SECTIONS: IPolicySection[] = [
   {
     title: "Internet access",
     paragraphs: [
-      "The app requests internet permission only so that Google Play can process tips and so that the links in Settings (my GitHub, LinkedIn and website) can open. Tapping a link opens it in your browser, and that site's own privacy policy applies from then on.",
+      "The app requests internet permission only so that Google Play can process tips, so that the links in Settings (my GitHub, LinkedIn and website) can open, and so that it can send the anonymous launch event described below. Tapping a link opens it in your browser, and that site's own privacy policy applies from then on.",
+    ],
+  },
+  {
+    title: "Anonymous usage analytics",
+    paragraphs: [
+      "Each time you open the app, it sends a small event to Expo's analytics service (Expo Application Services). The event contains a randomly generated installation identifier, the app version, the Android version and the app's project ID. It contains no name, email, income, categories or location, and it is not used to identify you or for advertising. I use it only to count app launches and see which versions are in use. Expo processes it on my behalf under [Expo's privacy policy](https://expo.dev/privacy).",
     ],
   },
   {
     title: "Data deletion",
     paragraphs: [
-      "Because your data exists only on your device, you control it fully. Uninstalling the app, or clearing its storage in Android settings, permanently deletes everything the app has saved. The app also disables Android's cloud backup of its data, so nothing is copied to your Google account.",
+      "Because your data exists only on your device, you control it fully. Uninstalling the app, or clearing its storage in Android settings, permanently deletes everything the app has saved. The anonymous launch events already sent contain no personal information and are not linked to you. The app also disables Android's cloud backup of its data, so nothing is copied to your Google account.",
     ],
   },
   {
     title: "Children's privacy",
     paragraphs: [
-      "Pay Slice is not directed at children under 13, and I do not knowingly collect information from anyone.",
+      "Pay Slice is not directed at children under 13, and I do not knowingly collect personal information from anyone.",
     ],
   },
   {

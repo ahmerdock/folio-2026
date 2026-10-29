@@ -4,7 +4,7 @@ import { PaySlicePrivacy } from "@/features";
 export const metadata: Metadata = {
   title: "Pay Slice Privacy Policy | Ahmer Dock",
   description:
-    "Pay Slice does not collect, store on a server, or share your personal data. Read how the app handles your information.",
+    "Pay Slice does not collect your personal information. Read how the app handles your data, including an anonymous launch event.",
   alternates: { canonical: "/apps-privacy/pay-slice" },
 };
 

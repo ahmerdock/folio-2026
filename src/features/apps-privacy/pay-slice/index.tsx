@@ -15,7 +15,7 @@ import {
   PRIVACY_SUMMARY_LABEL,
   PRIVACY_TITLE,
 } from "./privacy-policy.data";
-import { PolicySection } from "./components";
+import { PolicySection, PolicyText } from "./components";
 
 export default function PaySlicePrivacy() {
   return (
@@ -56,7 +56,9 @@ export default function PaySlicePrivacy() {
               ({ title, paragraphs, listIntro, list }, index) => (
                 <PolicySection key={title} number={index + 1} title={title}>
                   {paragraphs?.map((text) => (
-                    <p key={text}>{text}</p>
+                    <p key={text}>
+                      <PolicyText text={text} />
+                    </p>
                   ))}
                   {listIntro && (
                     <p className="text-white-secondary">{listIntro}</p>
