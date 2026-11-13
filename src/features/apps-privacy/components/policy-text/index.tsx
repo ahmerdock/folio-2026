@@ -1,12 +1,12 @@
 import { IPolicyTextProps } from "./policy-text.interface";
 
-// Matches [label](url); split() with a capture group keeps each match's two
+// Matches [label](url); split() with capture groups keeps each match's two
 // groups in the result, so parts cycle: text, label, url, text, label, url...
 const LINK_PATTERN = /\[([^\]]+)\]\(([^)]+)\)/;
 
 export default function PolicyText(props: IPolicyTextProps) {
   const { text } = props;
-  const parts = text.split(new RegExp(LINK_PATTERN, "g"));
+  const parts = text.split(LINK_PATTERN);
 
   return (
     <>
