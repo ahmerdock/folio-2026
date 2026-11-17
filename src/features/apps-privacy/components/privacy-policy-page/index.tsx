@@ -96,7 +96,7 @@ export default function PrivacyPolicyPage(props: IPrivacyPolicyPageProps) {
                             aria-hidden="true"
                             className="mt-[0.65em] size-2 shrink-0 rounded-full bg-primary"
                           />
-                          {item}
+                          <PolicyText text={item} />
                         </li>
                       ))}
                     </ul>
