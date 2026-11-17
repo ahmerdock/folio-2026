@@ -41,7 +41,8 @@ export const SIMPLI_NOTI_POLICY: IPrivacyPolicy = {
       title: "Permissions",
       list: [
         "Notifications: needed to show your reminders. On Android 13 and later, the app asks for your permission before it sends any notification.",
-        "Run at startup (boot completed): needed to re-schedule your reminders after your device restarts, since Android clears scheduled alarms on restart. It also re-schedules them after an app update or when the device clock or time zone changes.",
+        "Alarms & reminders (exact alarms): lets the app fire your reminders at the exact time you set. Android asks you to turn this on; if you leave it off, reminders still work but may arrive a little late. You can change it any time in Android settings. The app uses it only to schedule your reminders.",
+        "Run at startup (boot completed): needed to re-schedule your reminders after a restart, an app update, or a clock or time zone change.",
         "Internet access: needed for the analytics and update checks above, and for the in-app purchases below.",
         "Vibrate: used when a reminder notification fires.",
       ],
