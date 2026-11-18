@@ -13,6 +13,8 @@ const WHATSAPP_LOCAL_NUMBER = "3154806474";
 export const WHATSAPP_LINK = `https://wa.me/+${WHATSAPP_COUNTRY_CODE}${WHATSAPP_LOCAL_NUMBER}`;
 export const WHATSAPP_PHONE_INTL = `+${WHATSAPP_COUNTRY_CODE} ${WHATSAPP_LOCAL_NUMBER}`;
 
+export const CONTACT_EMAIL = "contact.ahmerdock@gmail.com";
+
 export const SOCIAL_LINKS: ISocialLink[] = [
   {
     label: "Whatsapp",
