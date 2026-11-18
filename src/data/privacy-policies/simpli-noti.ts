@@ -1,4 +1,5 @@
-import { IPrivacyPolicy } from "../privacy-policy.interface";
+import { CONTACT_EMAIL } from "@/constants";
+import { IPrivacyPolicy } from "@/interfaces";
 
 export const SIMPLI_NOTI_POLICY: IPrivacyPolicy = {
   captionPrefix: "Simpli Noti ",
@@ -106,5 +107,5 @@ export const SIMPLI_NOTI_POLICY: IPrivacyPolicy = {
   ],
   contactText:
     "If you have any questions about this privacy policy, contact Ahmer Dock at",
-  contactEmail: "contact.ahmerdock@gmail.com",
+  contactEmail: CONTACT_EMAIL,
 };

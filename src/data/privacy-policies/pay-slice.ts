@@ -1,4 +1,5 @@
-import { IPrivacyPolicy } from "../privacy-policy.interface";
+import { CONTACT_EMAIL } from "@/constants";
+import { IPrivacyPolicy } from "@/interfaces";
 
 export const PAY_SLICE_POLICY: IPrivacyPolicy = {
   captionPrefix: "Pay Slice ",
@@ -67,5 +68,5 @@ export const PAY_SLICE_POLICY: IPrivacyPolicy = {
     },
   ],
   contactText: "If you have questions about this policy, contact me at",
-  contactEmail: "contact.ahmerdock@gmail.com",
+  contactEmail: CONTACT_EMAIL,
 };

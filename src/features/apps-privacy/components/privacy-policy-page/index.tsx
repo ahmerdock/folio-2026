@@ -5,7 +5,7 @@ import {
   PRIVACY_CTA_LABEL,
   PRIVACY_SUMMARY_LABEL,
   PRIVACY_TITLE,
-} from "../../privacy-policy.data";
+} from "./privacy-policy-page.data";
 import PolicySection from "../policy-section";
 import PolicyText from "../policy-text";
 import { IPrivacyPolicyPageProps } from "./privacy-policy-page.interface";

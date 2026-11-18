@@ -1,4 +1,5 @@
-import { IPrivacyPolicy } from "../privacy-policy.interface";
+import { CONTACT_EMAIL } from "@/constants";
+import { IPrivacyPolicy } from "@/interfaces";
 
 export const COUCH_BEAM_POLICY: IPrivacyPolicy = {
   captionPrefix: "Couch Beam ",
@@ -102,5 +103,5 @@ export const COUCH_BEAM_POLICY: IPrivacyPolicy = {
     },
   ],
   contactText: "If you have questions about this policy, contact us at",
-  contactEmail: "contact.ahmerdock@gmail.com",
+  contactEmail: CONTACT_EMAIL,
 };

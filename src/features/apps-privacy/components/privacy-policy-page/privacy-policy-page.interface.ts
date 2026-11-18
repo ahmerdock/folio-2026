@@ -1,4 +1,4 @@
-import { IPrivacyPolicy } from "../../privacy-policy.interface";
+import { IPrivacyPolicy } from "@/interfaces";
 
 export interface IPrivacyPolicyPageProps {
   policy: IPrivacyPolicy;
