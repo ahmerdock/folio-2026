@@ -16,6 +16,7 @@ export default function CustomButton(props: ICustomButton) {
     size = "default",
     notchColor,
     borderColor,
+    labelClassName = "text-white-secondary",
   } = props;
 
   // White unless overridden; the class is dropped (not overridden) when a
@@ -155,20 +156,14 @@ export default function CustomButton(props: ICustomButton) {
       >
         <span
           ref={text1Ref}
-          className={cn(
-            "block font-heading text-white-secondary",
-            labelSizeClass,
-          )}
+          className={cn("block font-heading", labelClassName, labelSizeClass)}
         >
           {label}
         </span>
         <span
           ref={text2Ref}
           aria-hidden
-          className={cn(
-            "block font-heading text-white-secondary",
-            labelSizeClass,
-          )}
+          className={cn("block font-heading", labelClassName, labelSizeClass)}
         >
           {label}
         </span>

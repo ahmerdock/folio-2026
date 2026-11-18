@@ -28,4 +28,8 @@ export interface ICustomButton {
   // outline changes: the dash and label text colours are set separately and
   // are not affected.
   borderColor?: string;
+  // Tailwind text colour class for the label (e.g. "text-background").
+  // Defaults to text-white-secondary. Only meant for `filled` buttons: the
+  // non-filled hover animates the label colour inline and would override it.
+  labelClassName?: string;
 }
