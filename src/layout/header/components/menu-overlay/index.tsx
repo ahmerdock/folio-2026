@@ -86,10 +86,10 @@ export default function MenuOverlay(props: IMenuOverlayProps) {
         </ul>
       </div>
 
-      <div className="flex flex-wrap items-center justify-center gap-4 px-15 py-10 md:justify-between">
+      <div className="flex flex-wrap items-center justify-center gap-4 px-15 py-10 md:grid md:grid-cols-[1fr_auto_1fr]">
         <a
           href={`mailto:${CONTACT_EMAIL}`}
-          className="font-sans font-bold text-(length:--_typography---font-sizes--body--md) leading-normal tracking-normal text-white underline decoration-solid"
+          className="md:justify-self-start font-sans font-bold text-(length:--_typography---font-sizes--body--md) leading-normal tracking-normal text-white underline decoration-solid"
         >
           {CONTACT_EMAIL}
         </a>
@@ -100,7 +100,7 @@ export default function MenuOverlay(props: IMenuOverlayProps) {
 
         <a
           href={`tel:${CONTACT_PHONE}`}
-          className="font-sans font-bold text-(length:--_typography---font-sizes--body--md) leading-normal tracking-normal text-white underline decoration-solid"
+          className="md:justify-self-end font-sans font-bold text-(length:--_typography---font-sizes--body--md) leading-normal tracking-normal text-white underline decoration-solid"
         >
           {CONTACT_PHONE}
         </a>
