@@ -15,7 +15,7 @@ export const STEPS: IStep[] = [
     count: "02",
     title: "LOCK THE SCOPE",
     description:
-      "If you have Figma designs, I build from them. If not, the requirements doc guides the interface.",
+      "We agree on scope before any code. I build from your Figma, or from the requirements doc.",
   },
   {
     count: "03",

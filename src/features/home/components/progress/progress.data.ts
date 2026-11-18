@@ -21,7 +21,7 @@ export const PROGRESS_ITEMS: IProgressItem[] = [
     badgeLabel: "SHIPPED TO BOTH STORES",
     badgeColor: "#FF6EB0",
     description:
-      "Built a mobile app end to end, from first commit to the App Store and Play Store, three thousand plus downloads later it stopped being just a project.",
+      "Built a mobile app end to end, from first commit to the App Store and Play Store, 3000+ downloads later it stopped being just a project.",
     image: Progress2025Img,
   },
   {
