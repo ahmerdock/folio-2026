@@ -70,7 +70,7 @@ export default function CustomButton(props: ICustomButton) {
     className: cn(
       "relative inline-flex items-center rounded-full border-2",
       borderColorClass,
-      filled ? "bg-rose-light" : "bg-transparent",
+      filled ? "bg-lime" : "bg-transparent",
       isLg
         ? `gap-[clamp(0.25rem,1.39vw,1.25rem)] py-[clamp(0.5rem,1.94vw,1.75rem)]
             pr-[clamp(0.5rem,4.17vw,3.75rem)] pl-(--button-lg-edge-x)`

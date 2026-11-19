@@ -31,8 +31,8 @@ export const WORKS: IWork[] = [
     listImage: Work1ListImg,
     featured: true,
     featuredImage: FeaturedWork1Img,
-    paneColor: "#ab9bff",
-    imagePaneColor: "#8673ee",
+    paneColor: "#231d4a",
+    imagePaneColor: "#3a2f8f",
   },
   {
     slug: "push-past-pack-design",
@@ -43,8 +43,8 @@ export const WORKS: IWork[] = [
     listImage: Work2ListImg,
     featured: true,
     featuredImage: FeaturedWork2Img,
-    paneColor: "#ff905f",
-    imagePaneColor: "#ff7d44",
+    paneColor: "#4a2412",
+    imagePaneColor: "#8a3f17",
   },
   {
     slug: "packaging-design-on-demand-experts",
@@ -55,8 +55,8 @@ export const WORKS: IWork[] = [
     listImage: Work3ListImg,
     featured: true,
     featuredImage: FeaturedWork3Img,
-    paneColor: "#ff767a",
-    imagePaneColor: "#ff5b60",
+    paneColor: "#4a1c1e",
+    imagePaneColor: "#8f2a30",
   },
   {
     slug: "plenova-web-design-development",
@@ -67,8 +67,8 @@ export const WORKS: IWork[] = [
     listImage: Work4ListImg,
     featured: true,
     featuredImage: FeaturedWork4Img,
-    paneColor: "#b8c56f",
-    imagePaneColor: "#9fae4b",
+    paneColor: "#2f3410",
+    imagePaneColor: "#55601a",
   },
   {
     slug: "placeholder-project-five",

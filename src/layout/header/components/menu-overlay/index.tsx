@@ -57,7 +57,7 @@ export default function MenuOverlay(props: IMenuOverlayProps) {
             style={{
               transform: `translate(-50%, -50%) rotate(${TAGLINE_ROTATE_DEG}deg)`,
             }}
-            className="pointer-events-none absolute top-1/2 left-1/2 hidden bg-rose px-[clamp(0.75rem,calc(1.19vw+1.17875rem),2.25rem)] py-[clamp(1rem,calc(0.595vw+0.714375rem),1.25rem)] md:block"
+            className="pointer-events-none absolute top-1/2 left-1/2 hidden bg-lime px-[clamp(0.75rem,calc(1.19vw+1.17875rem),2.25rem)] py-[clamp(1rem,calc(0.595vw+0.714375rem),1.25rem)] md:block"
           >
             <span className="font-heading font-normal text-[clamp(1.75rem,calc(1.04vw+1.25rem),2.1875rem)] leading-[0.8] tracking-[-0.01em] whitespace-nowrap text-black-secondary uppercase">
               {TAGLINE_TEXT}

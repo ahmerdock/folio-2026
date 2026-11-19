@@ -24,16 +24,16 @@ export default function WorkCard(props: IWorkCardProps) {
       )}
     >
       <div className="flex flex-col items-start justify-center px-5 py-8 sm:px-8 sm:py-10 md:py-15 lg:px-15 lg:py-20">
-        <h3 className="max-w-none text-(length:--_typography---font-sizes--heading--h4) leading-none font-normal tracking-[-0.01em] text-black-secondary uppercase md:max-w-[18ch]">
+        <h3 className="max-w-none text-(length:--_typography---font-sizes--heading--h4) leading-none font-normal tracking-[-0.01em] text-white-secondary uppercase md:max-w-[18ch]">
           <Link
             href={work.href}
-            className="underline decoration-transparent decoration-[3px] transition-[text-decoration-color] duration-300 hover:decoration-black-secondary"
+            className="underline decoration-transparent decoration-[3px] transition-[text-decoration-color] duration-300 hover:decoration-white-secondary"
           >
             {work.title}
           </Link>
         </h3>
 
-        <p className="mt-4 mb-8 max-w-130 text-base leading-6 text-black-secondary sm:mt-5 sm:mb-12 lg:mt-6 lg:mb-15 lg:text-xl lg:leading-7.5 2xl:max-w-151.75">
+        <p className="mt-4 mb-8 max-w-130 text-base leading-6 text-white-secondary sm:mt-5 sm:mb-12 lg:mt-6 lg:mb-15 lg:text-xl lg:leading-7.5 2xl:max-w-151.75">
           {work.description}
         </p>
 

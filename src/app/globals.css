@@ -4,8 +4,6 @@
   --color-black-secondary: var(--black-secondary);
   --color-background: var(--background);
   --color-primary: var(--primary);
-  --color-rose: var(--rose);
-  --color-rose-light: var(--rose-light);
   --color-jet-black: var(--jet-black);
   --color-transparent: var(--transparent);
   --color-white: var(--white);
@@ -28,8 +26,6 @@
   --black-secondary: #121212;
   --background: #0d0c0c;
   --primary: #b63331;
-  --rose: #d48c9e;
-  --rose-light: #ebd9da;
   --jet-black: #0c0c0c;
   --transparent: #fff0;
   --white: #fff;

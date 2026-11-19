@@ -28,7 +28,7 @@ export default function ServiceVideo(props: IServiceVideoProps) {
         onClick={toggle}
         aria-label={paused ? `Play ${label} video` : `Pause ${label} video`}
         className={cn(
-          "absolute cursor-pointer rounded-full bg-white-secondary p-3 text-black-secondary focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black-secondary",
+          "absolute cursor-pointer rounded-full bg-white-secondary p-3 text-black-secondary focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-lime",
           buttonClassName,
         )}
       >
