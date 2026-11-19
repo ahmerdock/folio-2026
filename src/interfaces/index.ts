@@ -48,9 +48,12 @@ export interface IWorkDetails {
   slug: string;
   // The facts under the title, e.g. Client, Country.
   meta: { label: string; value: string }[];
-  // The project's public site; the hero's "Visit Site" button shows only when
-  // this is set.
-  visitSiteHref?: string;
+  // Buttons under the facts, e.g. a site or the store pages; none shows no
+  // buttons.
+  links?: { label: string; href: string }[];
+  // The technologies the project was built with, shown as chips under the
+  // facts.
+  stack?: string[];
   bannerImage: StaticImageData;
   challenge: { title: string; lead: string; text: string };
   showcaseImages: [StaticImageData, StaticImageData];

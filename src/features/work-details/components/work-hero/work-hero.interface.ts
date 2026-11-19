@@ -4,5 +4,6 @@ export interface IWorkHeroProps {
   title: string;
   tags: string[];
   meta: IWorkDetails["meta"];
-  visitSiteHref?: string;
+  links?: IWorkDetails["links"];
+  stack?: IWorkDetails["stack"];
 }

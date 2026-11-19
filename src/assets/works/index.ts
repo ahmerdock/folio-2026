@@ -1,4 +1,12 @@
-export { default as Work1ListImg } from "./work-1-list-img.jpg";
+export { default as AmmaListImg } from "./amma-list-img.jpg";
+export { default as AmmaFeaturedImg } from "./amma-featured-img.jpg";
+export { default as AmmaBannerImg } from "./amma-banner-img.jpg";
+export { default as AmmaLeftImg } from "./amma-left-img.jpg";
+export { default as AmmaRightImg } from "./amma-right-img.jpg";
+export { default as AmmaDescImg } from "./amma-desc-img.jpg";
+export { default as AmmaResult1Img } from "./amma-result-1-img.jpg";
+export { default as AmmaResult2Img } from "./amma-result-2-img.jpg";
+export { default as AmmaResult3Img } from "./amma-result-3-img.jpg";
 export { default as Work2ListImg } from "./work-2-list-img.jpg";
 export { default as Work3ListImg } from "./work-3-list-img.jpg";
 export { default as Work4ListImg } from "./work-4-list-img.jpg";

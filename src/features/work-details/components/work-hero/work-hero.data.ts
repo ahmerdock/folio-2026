@@ -1,1 +1,1 @@
-export const VISIT_SITE_LABEL = "Visit Site";
+export const STACK_LABEL = "Built with";

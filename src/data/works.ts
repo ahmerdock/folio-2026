@@ -1,11 +1,11 @@
 import {
-  FeaturedWork1Img,
   FeaturedWork2Img,
   FeaturedWork3Img,
   FeaturedWork4Img,
 } from "@/assets/images";
 import {
-  Work1ListImg,
+  AmmaFeaturedImg,
+  AmmaListImg,
   Work2ListImg,
   Work3ListImg,
   Work4ListImg,
@@ -23,16 +23,16 @@ export const MAX_FEATURED_WORK = 5;
 // PLACEHOLDER copy, tags and images, to be replaced with real content.
 export const WORKS: IWork[] = [
   {
-    slug: "drink-different-web-design",
-    title: "Drink Different Web Design WITH WP",
+    slug: "armored-mma-cage-calls",
+    title: "Armored MMA - Cage Calls",
     description:
-      "Drink Different Web Design with WP delivers bold, refreshing WordPress sites featuring custom layouts, vibrant visuals, smooth interactions, and a playful brand style experience.",
-    tags: ["Frontend", "Backend", "Web"],
-    listImage: Work1ListImg,
+      "AMMA is the official Armored MMA fan hub: follow events and fighters, make free fight predictions, and collect digital Relics. I built the mobile app, the admin portal, and the cloud behind them.",
+    tags: ["Mobile", "Full Stack", "DevOps"],
+    listImage: AmmaListImg,
     featured: true,
-    featuredImage: FeaturedWork1Img,
-    paneColor: "#231d4a",
-    imagePaneColor: "#3a2f8f",
+    featuredImage: AmmaFeaturedImg,
+    paneColor: "#4a1c1e",
+    imagePaneColor: "#8f2a30",
   },
   {
     slug: "push-past-pack-design",
@@ -55,8 +55,8 @@ export const WORKS: IWork[] = [
     listImage: Work3ListImg,
     featured: true,
     featuredImage: FeaturedWork3Img,
-    paneColor: "#4a1c1e",
-    imagePaneColor: "#8f2a30",
+    paneColor: "#231d4a",
+    imagePaneColor: "#3a2f8f",
   },
   {
     slug: "plenova-web-design-development",

@@ -18,7 +18,7 @@ export const PROJECT_2_DETAILS: IWorkDetails = {
     { label: "Expertise", value: "Mobile & Leadership" },
     { label: "Duration", value: "5 Months, 2025" },
   ],
-  visitSiteHref: "https://example.com",
+  links: [{ label: "Visit Site", href: "https://example.com" }],
   bannerImage: WorkBannerImg,
   challenge: {
     title: "The Challenge",

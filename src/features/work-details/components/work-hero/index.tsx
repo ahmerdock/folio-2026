@@ -4,12 +4,12 @@ import { useRef } from "react";
 import { CustomButton } from "@/components";
 import { useTitleReveal } from "@/lib";
 import { TagList } from "../../../components";
-import { VISIT_SITE_LABEL } from "./work-hero.data";
+import { STACK_LABEL } from "./work-hero.data";
 import { IWorkHeroProps } from "./work-hero.interface";
 import { BODY_TEXT_CLASS } from "../../work-details.data";
 
 export default function WorkHero(props: IWorkHeroProps) {
-  const { title, tags, meta, visitSiteHref } = props;
+  const { title, tags, meta, links, stack } = props;
   const sectionRef = useRef<HTMLElement>(null);
   useTitleReveal(sectionRef);
 
@@ -38,13 +38,31 @@ export default function WorkHero(props: IWorkHeroProps) {
               </div>
             ))}
           </dl>
-          {visitSiteHref && (
-            <div>
-              <CustomButton
-                label={VISIT_SITE_LABEL}
-                href={visitSiteHref}
-                target="_blank"
-              />
+          {stack && stack.length > 0 && (
+            <div className="flex flex-col gap-3">
+              <p className="text-base font-bold">{STACK_LABEL}</p>
+              <ul className="flex flex-wrap gap-2">
+                {stack.map((tech) => (
+                  <li
+                    key={tech}
+                    className="rounded-full border border-white-secondary/40 px-3 py-1 text-sm leading-none font-semibold uppercase lg:px-5 lg:text-base lg:leading-[1.4]"
+                  >
+                    {tech}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          )}
+          {links && links.length > 0 && (
+            <div className="flex flex-wrap gap-4">
+              {links.map(({ label, href }) => (
+                <CustomButton
+                  key={label}
+                  label={label}
+                  href={href}
+                  target="_blank"
+                />
+              ))}
             </div>
           )}
         </div>

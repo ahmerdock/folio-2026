@@ -33,7 +33,8 @@ export default function WorkDetails(props: IWorkDetailsProps) {
         title={work.title}
         tags={work.tags}
         meta={details.meta}
-        visitSiteHref={details.visitSiteHref}
+        links={details.links}
+        stack={details.stack}
       />
       <FluidImage
         image={details.bannerImage}
