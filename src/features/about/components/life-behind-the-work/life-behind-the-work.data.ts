@@ -6,7 +6,6 @@ import {
 } from "@/assets/images";
 import { ILifeMoment } from "./life-behind-the-work.interface";
 
-// PLACEHOLDER copy and images, to be replaced with real content.
 export const LIFE_TITLE = "Life behind the work";
 export const LIFE_DESCRIPTION =
   "From the first call to the final release, this is how my days run.";
@@ -34,11 +33,8 @@ export const LIFE_TILT_DEG = LIFE_MOMENTS.map(({ tiltDeg }) => tiltDeg);
 // element's top is 90% down the screen. The description waits 0.2s and is
 // quicker.
 export const LIFE_REVEAL_SCROLL_START = "top 90%";
-// PLACEHOLDER copy and images, to be replaced with real content.
 export const LIFE_TITLE_REVEAL_DURATION_S = 1;
-// PLACEHOLDER copy and images, to be replaced with real content.
 export const LIFE_TITLE_REVEAL_STAGGER_AMOUNT_S = 0.5;
-// PLACEHOLDER copy and images, to be replaced with real content.
 export const LIFE_TITLE_REVEAL_EASE = "back.inOut";
 export const LIFE_TEXT_REVEAL_DELAY_S = 0.2;
 export const LIFE_TEXT_REVEAL_DURATION_S = 0.8;

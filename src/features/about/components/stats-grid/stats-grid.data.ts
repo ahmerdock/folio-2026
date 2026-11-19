@@ -6,7 +6,6 @@ import {
 } from "@/assets/icons";
 import { IStat } from "./stats-grid.interface";
 
-// PLACEHOLDER labels, to be replaced with real content.
 export const STATS: IStat[] = [
   {
     value: "04+",

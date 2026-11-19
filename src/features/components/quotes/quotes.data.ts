@@ -8,7 +8,6 @@ export const QUOTES_LABEL = "The numbers behind the work";
 // order. The first entry is active on load. A "person" caption shows a name
 // over a role and wraps the quote in quotation marks; a "label" caption shows
 // two uppercase lines and no quotation marks.
-// PLACEHOLDER copy, to be replaced with real content.
 export const QUOTES: IQuote[] = [
   {
     stat: "01 ONLY",

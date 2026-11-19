@@ -6,7 +6,6 @@ import {
 } from "@/assets/images";
 import { IHat } from "./hats-i-wear.interface";
 
-// PLACEHOLDER copy, to be replaced with real content.
 export const HATS_TITLE = "The hats I wear";
 export const HATS_BADGE = "One person";
 
@@ -43,11 +42,8 @@ export const HATS: IHat[] = [
 // timeline: the title's characters slide down through a mask once its top is
 // 90% down the screen, then the sticker pops in.
 export const HATS_REVEAL_SCROLL_START = "top 90%";
-// PLACEHOLDER copy, to be replaced with real content.
 export const HATS_TITLE_REVEAL_DURATION_S = 1;
-// PLACEHOLDER copy, to be replaced with real content.
 export const HATS_TITLE_REVEAL_STAGGER_AMOUNT_S = 0.5;
-// PLACEHOLDER copy, to be replaced with real content.
 export const HATS_TITLE_REVEAL_EASE = "back.inOut";
 export const HATS_BADGE_REVEAL_START_S = 1;
 export const HATS_BADGE_REVEAL_DURATION_S = 0.6;

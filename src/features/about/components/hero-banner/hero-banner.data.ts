@@ -1,6 +1,5 @@
 import { Trusted1Img, Trusted2Img, Trusted3Img } from "@/assets/images";
 
-// PLACEHOLDER copy, to be replaced with real content.
 export const HERO_CAPTION_PREFIX = "Meet ";
 export const HERO_CAPTION_EMPHASIS = "(the)";
 export const HERO_CAPTION_SUFFIX = " Builder";
@@ -12,5 +11,6 @@ export const HERO_TITLE_AFTER = "EVERY IDEA FROM FIRST COMMIT TO LAUNCH";
 export const HERO_RATING = "4.9";
 export const HERO_RATING_LABEL = "Rating From Clients";
 export const HERO_STAR_COUNT = 5;
-// The three project logos, shared with the Trusted Founders wheel.
+// PLACEHOLDER: the three project logos (shared with the Trusted Founders
+// wheel) stand in for client photos until real ones are ready.
 export const HERO_AVATARS = [Trusted1Img, Trusted2Img, Trusted3Img];

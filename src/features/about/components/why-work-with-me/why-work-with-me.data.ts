@@ -6,7 +6,6 @@ import {
 import { IWhyWorkCard } from "./why-work-with-me.interface";
 
 export const WHY_WORK_TITLE = "Why work with me";
-// PLACEHOLDER copy, to be replaced with real content.
 export const WHY_WORK_HIGHLIGHT = "No handoffs";
 export const WHY_WORK_PARAGRAPHS = [
   "I help founders and teams turn rough ideas into real products, built end to end across the frontend, the backend, and the app stores.",
