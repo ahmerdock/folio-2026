@@ -16,6 +16,7 @@
   --color-charcoal: var(--charcoal);
   --color-lime: var(--lime);
   --color-iron: var(--iron);
+  --color-vivid-red: var(--vivid-red);
   --font-sans: var(--font-dm-sans);
   --font-heading: var(--font-bebas-neue);
   --background-image-wipe: var(--gradient-wipe);
@@ -39,6 +40,7 @@
   --charcoal: #bbbbbb;
   --lime: #e8ff76;
   --iron: #464646;
+  --vivid-red: #ff6b6b;
   --gradient-ember: linear-gradient(180deg, var(--primary) 0%, #d35516 100%);
   --gradient-primary: radial-gradient(
     50% 50% at 50% 50%,

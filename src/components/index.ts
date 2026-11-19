@@ -8,3 +8,4 @@ export { default as CustomLabel } from "./custom-label";
 export { default as ServiceVideo } from "./service-video";
 export { default as StarRating } from "./star-rating";
 export { default as StatCounter } from "./stat-counter";
+export { default as Tabs } from "./tabs";

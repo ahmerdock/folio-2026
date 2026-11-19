@@ -4,3 +4,4 @@ export { default as NotFound } from "./not-found";
 export { default as AppsPrivacy } from "./apps-privacy";
 export * from "./apps-privacy";
 export { default as Services } from "./services";
+export { default as Contact } from "./contact";

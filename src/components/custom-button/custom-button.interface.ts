@@ -2,7 +2,12 @@ import { ComponentType, SVGProps } from "react";
 
 export interface ICustomButton {
   label: string;
-  href: string;
+  // A link when given; without one the button renders as a real <button>
+  // (e.g. a form's submit).
+  href?: string;
+  // Only for the <button> form.
+  type?: "button" | "submit";
+  disabled?: boolean;
   target?: "_self" | "_blank" | "_parent" | "_top";
   className?: string;
   // Trailing icon badge (e.g. ArrowIcon) — omitted by default. Passed as a

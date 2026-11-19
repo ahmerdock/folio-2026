@@ -42,7 +42,11 @@ interface IUseCustomButtonOptions {
 export default function useCustomButton(options: IUseCustomButtonOptions) {
   const { filled, hasIcon, isLg } = options;
 
-  const containerRef = useRef<HTMLAnchorElement>(null);
+  // A link, or a real button when no href is given.
+  const containerRef = useRef<HTMLElement | null>(null);
+  const setContainerRef = (node: HTMLElement | null) => {
+    containerRef.current = node;
+  };
   const dashRef = useRef<HTMLSpanElement>(null);
   const notch1Ref = useRef<HTMLSpanElement>(null);
   const notch2Ref = useRef<HTMLSpanElement>(null);
@@ -216,7 +220,7 @@ export default function useCustomButton(options: IUseCustomButtonOptions) {
   const onMouseLeave = () => tlRef.current?.reverse();
 
   return {
-    containerRef,
+    setContainerRef,
     dashRef,
     notch1Ref,
     notch2Ref,
