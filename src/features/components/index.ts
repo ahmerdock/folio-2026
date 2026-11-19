@@ -2,3 +2,6 @@ export { default as Quotes } from "./quotes";
 export { default as ExpertSolutions } from "./expert-solutions";
 export { default as TrustedFounders } from "./trusted-founders";
 export { default as ClientsFeedback } from "./clients-feedback";
+export { default as ProjectList } from "./project-list";
+export { default as TagList } from "./tag-list";
+export { default as WorkHero } from "./work-hero";

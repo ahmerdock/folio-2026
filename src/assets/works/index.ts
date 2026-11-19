@@ -1,0 +1,13 @@
+export { default as Work1ListImg } from "./work-1-list-img.jpg";
+export { default as Work2ListImg } from "./work-2-list-img.jpg";
+export { default as Work3ListImg } from "./work-3-list-img.jpg";
+export { default as Work4ListImg } from "./work-4-list-img.jpg";
+export { default as Work5ListImg } from "./work-5-list-img.jpg";
+export { default as Work6ListImg } from "./work-6-list-img.jpg";
+export { default as WorkBannerImg } from "./work-banner-img.jpg";
+export { default as WorkLeftImg } from "./work-left-img.jpg";
+export { default as WorkRightImg } from "./work-right-img.jpg";
+export { default as WorkDescImg } from "./work-desc-img.jpg";
+export { default as WorkResult1Img } from "./work-result-1-img.jpg";
+export { default as WorkResult2Img } from "./work-result-2-img.jpg";
+export { default as WorkResult3Img } from "./work-result-3-img.jpg";
