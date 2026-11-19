@@ -4,6 +4,7 @@
   --color-black-secondary: var(--black-secondary);
   --color-background: var(--background);
   --color-primary: var(--primary);
+  --color-primary-deep: var(--primary-deep);
   --color-jet-black: var(--jet-black);
   --color-transparent: var(--transparent);
   --color-white: var(--white);
@@ -26,6 +27,7 @@
   --black-secondary: #121212;
   --background: #0d0c0c;
   --primary: #b63331;
+  --primary-deep: #8f2a30;
   --jet-black: #0c0c0c;
   --transparent: #fff0;
   --white: #fff;

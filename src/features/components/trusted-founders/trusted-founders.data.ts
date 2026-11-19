@@ -18,8 +18,10 @@ export const TRUSTED_TITLE_ACCENT = "Founders";
 export const TRUSTED_CTA_LABEL = "Contact Now";
 export const TRUSTED_CTA_HREF = ROUTES.CONTACT;
 
-// PLACEHOLDER images, to be replaced with real project work. They sit
-// around the wheel in this order, one every TRUSTED_STEP_DEG degrees.
+// The project logos around the wheel, in this order, one every
+// TRUSTED_STEP_DEG degrees.
+// PLACEHOLDER: slots 8 to 10 still use the template images, to be replaced
+// with real project logos.
 export const TRUSTED_IMAGES = [
   Trusted1Img,
   Trusted2Img,

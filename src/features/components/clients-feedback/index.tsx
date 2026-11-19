@@ -53,7 +53,7 @@ export default function ClientsFeedback() {
                 className={cn(
                   "flex h-full flex-col lg:rotate-(--tilt) lg:scale-(--hover-scale) justify-between p-5 sm:p-6 md:min-h-122.5 lg:min-h-155 lg:p-8 rounded-2xl sm:rounded-[20px] md:rounded-3xl lg:rounded-[40px]",
                   dark
-                    ? "bg-primary text-white"
+                    ? "bg-primary-deep text-white"
                     : "bg-mist text-white-secondary",
                 )}
                 style={

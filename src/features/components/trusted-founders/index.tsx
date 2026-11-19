@@ -68,7 +68,7 @@ export default function TrustedFounders() {
               alt=""
               sizes="(min-width: 1024px) 14vw, 18vw"
               className={cn(
-                "h-auto w-full rounded-lg object-cover",
+                "h-auto w-full rounded-lg object-cover ring-1 ring-white/15",
                 "sm:rounded-2xl md:rounded-3xl lg:rounded-[40px]",
               )}
             />
