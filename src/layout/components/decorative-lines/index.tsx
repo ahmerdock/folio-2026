@@ -4,7 +4,7 @@ import { cn } from "@/lib";
 import { IDecorativeLinesProps } from "./decorative-lines.interface";
 
 export default function DecorativeLines(props: IDecorativeLinesProps) {
-  const { heights, gap, lineClassName = "bg-primary/40", className } = props;
+  const { heights, gap, lineClassName = "bg-mist", className } = props;
 
   return (
     <div className={cn("flex flex-col", className)} style={{ gap }}>

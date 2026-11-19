@@ -87,7 +87,6 @@ export default function ExpertSolutions() {
       <DecorativeLines
         heights={EXPERT_LINE_HEIGHTS_PX}
         gap={EXPERT_LINE_GAP_PX}
-        lineClassName="bg-mist"
         className={cn("mt-1 w-full", EXPERT_LINE_RESPONSIVE_HEIGHTS)}
       />
     </>

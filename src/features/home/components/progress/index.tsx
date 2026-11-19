@@ -33,7 +33,7 @@ export default function Progress() {
                   <div className="relative mb-4 flex items-center gap-x-4 sm:gap-x-5 md:mb-5 lg:mb-6 lg:gap-x-8">
                     <span
                       style={{ backgroundColor: item.badgeColor }}
-                      className="font-heading text-(length:--_typography---font-sizes--body--badge) absolute top-6.5 right-21.5 w-fit rotate-[-15deg] px-4 py-3 leading-[0.8] tracking-[-0.01em] text-white-secondary max-sm:hidden md:top-9 md:right-32.75 lg:top-13.75 lg:right-38.5 lg:px-6 lg:py-4"
+                      className="font-heading text-(length:--_typography---font-sizes--body--badge) absolute top-6.5 right-21.5 w-fit rotate-[-15deg] px-4 py-3 leading-[0.8] tracking-[-0.01em] whitespace-nowrap text-black-secondary max-sm:hidden md:top-9 md:right-32.75 lg:top-13.75 lg:right-38.5 lg:px-6 lg:py-4"
                     >
                       {item.badgeLabel}
                     </span>
