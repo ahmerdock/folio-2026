@@ -5,7 +5,6 @@ import { CONTACT_BASE_DEFAULT_VALUES } from "../../contact-form.data";
 export const QUOTE_OTHER_PROJECT_TYPE = "Other";
 
 // The values the form accepts; each is also its own label.
-// PLACEHOLDER copy, to be replaced with real content.
 export const QUOTE_PROJECT_TYPES = [
   "Frontend Development",
   "Backend & APIs",
@@ -15,7 +14,6 @@ export const QUOTE_PROJECT_TYPES = [
   "Team Leadership",
   QUOTE_OTHER_PROJECT_TYPE,
 ] as const;
-// PLACEHOLDER ranges, to be replaced with real content.
 export const QUOTE_BUDGETS = [
   "5k-10k",
   "10k-15k",

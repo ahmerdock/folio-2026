@@ -1,10 +1,7 @@
-// The address mail is sent from. Nothing reads replies sent to it; the
-// visitor's own address is set as the reply-to instead.
-// PLACEHOLDER: Resend's shared test sender, which can only deliver to the
-// email the Resend account was created with. Replace it with an address on a
-// domain verified in Resend (e.g. "Ahmer Dock <noreply@mail.yourdomain.com>")
-// before going live.
-export const CONTACT_FROM = "Ahmer Dock <onboarding@resend.dev>";
+// The address mail is sent from, on the domain verified in Resend. Nothing
+// reads replies sent to it; the visitor's own address is set as the reply-to
+// instead.
+export const CONTACT_FROM = "Ahmer Dock <noreply@mail.ahmerdock.com>";
 
 // How long a send to Resend may take before it counts as failed, so a slow
 // service shows the visitor the error instead of leaving "Sending..." up.
