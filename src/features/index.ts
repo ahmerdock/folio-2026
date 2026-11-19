@@ -3,3 +3,4 @@ export { default as About } from "./about";
 export { default as NotFound } from "./not-found";
 export { default as AppsPrivacy } from "./apps-privacy";
 export * from "./apps-privacy";
+export { default as Services } from "./services";
