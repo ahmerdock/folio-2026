@@ -19,6 +19,7 @@
   --font-sans: var(--font-dm-sans);
   --font-heading: var(--font-bebas-neue);
   --background-image-wipe: var(--gradient-wipe);
+  --background-image-halo: var(--gradient-halo);
   --background-image-ember: var(--gradient-ember);
 }
 
@@ -48,6 +49,11 @@
     180deg,
     var(--white-secondary) 32%,
     var(--black-secondary) 90%
+  );
+  --gradient-halo: linear-gradient(
+    180deg,
+    var(--background) 30%,
+    var(--primary) 100%
   );
   --gradient-wipe: linear-gradient(180deg, transparent 0%, var(--primary) 100%);
   --_typography---font-sizes--heading--h5: clamp(
