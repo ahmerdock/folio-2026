@@ -20,8 +20,8 @@ export const TRUSTED_CTA_HREF = ROUTES.CONTACT;
 
 // The project logos around the wheel, in this order, one every
 // TRUSTED_STEP_DEG degrees.
-// PLACEHOLDER: slots 8 to 10 still use the template images, to be replaced
-// with real project logos.
+// Medieval Tech, AMMA, Agentic Creed, ATX, The Coaching App, then my three own
+// apps. PLACEHOLDER: slots 9 and 10 are dummy logos, to be replaced later.
 export const TRUSTED_IMAGES = [
   Trusted1Img,
   Trusted2Img,

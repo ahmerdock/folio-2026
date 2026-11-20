@@ -12,7 +12,7 @@ import { IWorkDetails } from "@/interfaces";
 export const PROJECT_2_DETAILS: IWorkDetails = {
   slug: "the-coaching-app",
   meta: [
-    { label: "Client", value: "Umer" },
+    { label: "Client", value: "Muhammad Umer" },
     { label: "Country", value: "Germany" },
     { label: "Expertise", value: "Full Stack" },
     { label: "Duration", value: "Jun 2024 to Sep 2024" },
