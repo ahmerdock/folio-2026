@@ -12,11 +12,11 @@ export const REEL_WORD_TEXT_CLASS =
   "block transition-opacity duration-500 motion-reduce:transition-none";
 export const REEL_WORD_TEXT_HIDDEN_CLASS = "opacity-0";
 
-// TEMPORARY: reuses an expert-solutions clip until the real reel is ready. The
-// reel and its poster frame are served from public/videos because Turbopack
-// can't import .mp4 files. Replace both files to change the reel.
-export const REEL_VIDEO_SRC = "/videos/expert-sol-1-vid.mp4";
-export const REEL_POSTER_SRC = "/videos/expert-sol-1-poster.jpg";
+// The reel is a silent montage of the featured projects. The reel and its
+// poster frame are served from public/videos because Turbopack can't import
+// .mp4 files. Replace both files to change the reel.
+export const REEL_VIDEO_SRC = "/videos/play-reel-vid.mp4";
+export const REEL_POSTER_SRC = "/videos/play-reel-poster.jpg";
 
 // The pinned, scroll-driven layout only exists from 1024px up with motion
 // allowed (the reference drops it just below). Must equal the
