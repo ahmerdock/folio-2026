@@ -6,6 +6,7 @@ import {
   CONTACT_CAPTION_EMPHASIS,
   CONTACT_CAPTION_PREFIX,
   CONTACT_CAPTION_SUFFIX,
+  CONTACT_INTRO,
   CONTACT_TITLE,
 } from "./contact-hero.data";
 
@@ -28,6 +29,9 @@ export default function ContactHero() {
         >
           {CONTACT_TITLE}
         </h1>
+        <p className="mt-5 max-w-[48ch] text-base leading-snug text-white-secondary/80 md:mt-6 lg:mt-8 lg:text-xl">
+          {CONTACT_INTRO}
+        </p>
       </div>
     </section>
   );

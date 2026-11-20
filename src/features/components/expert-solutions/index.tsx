@@ -44,7 +44,7 @@ export default function ExpertSolutions() {
           </header>
 
           <div>
-            {EXPERT_SOLUTIONS.map(({ title, tags, video, poster }) => (
+            {EXPERT_SOLUTIONS.map(({ title, description, tags, video, poster }) => (
               <article
                 key={title}
                 className="sticky top-25 border-t border-ash bg-mist py-15 max-lg:py-10 max-md:top-12 max-md:py-8 max-sm:py-6 2xl:py-25"
@@ -53,10 +53,13 @@ export default function ExpertSolutions() {
                   <div className="flex-[260px] max-lg:basis-72.5 max-md:basis-82.5">
                     <h3
                       data-expert-title
-                      className="mb-10 text-(length:--_typography---font-sizes--heading--h3) leading-none font-normal tracking-[-0.01em] uppercase max-lg:mb-6"
+                      className="mb-6 text-(length:--_typography---font-sizes--heading--h3) leading-none font-normal tracking-[-0.01em] uppercase max-lg:mb-4"
                     >
                       {title}
                     </h3>
+                    <p className="mb-8 max-w-[48ch] text-base leading-snug text-white-secondary/80 max-lg:mb-6 lg:text-lg">
+                      {description}
+                    </p>
                     <p className="mb-4 text-base font-bold text-white-secondary uppercase lg:mb-5 lg:text-xl">
                       {EXPERT_TAGS_LABEL}
                     </p>

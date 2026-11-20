@@ -1,3 +1,4 @@
+import { SITE_SERVICES } from "@/data/site";
 import { IExpertSolution } from "./expert-solutions.interface";
 
 export const EXPERT_TITLE = "Expert SOLUTIONS";
@@ -6,10 +7,12 @@ export const EXPERT_TAGS_LABEL = "Services included:";
 
 // Videos and their poster frames are served from public/videos: Turbopack
 // can't import .mp4 files.
-// Tags follow the resume.
+// Tags follow the resume. Descriptions come from the same service list the
+// structured data uses, in the same order, so the page and the markup agree.
 export const EXPERT_SOLUTIONS: IExpertSolution[] = [
   {
     title: "FRONTEND ENGINEERING",
+    description: SITE_SERVICES[0].description,
     tags: [
       "React",
       "Next.js",
@@ -24,6 +27,7 @@ export const EXPERT_SOLUTIONS: IExpertSolution[] = [
   },
   {
     title: "BACKEND & APIS",
+    description: SITE_SERVICES[1].description,
     tags: [
       "Node.js",
       "NestJS",
@@ -38,6 +42,7 @@ export const EXPERT_SOLUTIONS: IExpertSolution[] = [
   },
   {
     title: "MOBILE APPS",
+    description: SITE_SERVICES[2].description,
     tags: [
       "React + Capacitor",
       "React Native",
@@ -52,6 +57,7 @@ export const EXPERT_SOLUTIONS: IExpertSolution[] = [
   },
   {
     title: "LAUNCH & LEADERSHIP",
+    description: SITE_SERVICES[3].description,
     tags: [
       "AWS (S3, EC2, Lambda)",
       "Docker",

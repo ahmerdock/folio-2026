@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { getWorkSeoDescription } from "@/data/site";
 import { getWorkHref } from "@/data/works";
 import TagList from "../../../tag-list";
 import { IProjectCardProps } from "./project-card.interface";
@@ -35,6 +36,11 @@ export default function ProjectCard(props: IProjectCardProps) {
             {work.title}
           </Link>
         </h3>
+        {/* The short search description doubles as the card summary, so the
+            list page carries real text for readers and crawlers. */}
+        <p className="max-w-[48ch] text-base leading-snug text-white-secondary/80 lg:text-lg">
+          {getWorkSeoDescription(work.slug, work.description)}
+        </p>
         <TagList tags={work.tags} />
       </div>
     </li>

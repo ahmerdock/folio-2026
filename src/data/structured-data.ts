@@ -22,6 +22,13 @@ const PERSON_ID = `${SITE_URL}/#person`;
 const SERVICE_ID = `${SITE_URL}/#service`;
 const WEBSITE_ID = `${SITE_URL}/#website`;
 const OG_IMAGE_URL = getAbsoluteUrl("/og-image.jpg");
+const HOME_PAGE_ID = `${SITE_URL}/#webpage`;
+
+// Launch date, and the last time the page copy changed. Bump SITE_MODIFIED
+// when the content changes: it is a recency signal for search engines and AI
+// answers, so it should not drift from the truth.
+const SITE_PUBLISHED = "2026-11-20";
+const SITE_MODIFIED = "2026-11-20";
 
 // The same person as on the home page, restated with a name so a project page
 // still reads on its own.
@@ -34,7 +41,7 @@ const CREATOR = {
   sameAs: SITE_PROFILE_URLS,
 };
 
-// WebSite, Person and ProfessionalService for the home page, linked by @id so
+// WebSite, WebPage, Person and ProfessionalService for the home page, linked by @id so
 // a crawler reads them as one entity. No ratings or reviews are marked up:
 // the site's own testimonials and rating would be self-serving.
 export function getHomeStructuredData() {
@@ -49,6 +56,26 @@ export function getHomeStructuredData() {
         description: SITE_BIO,
         publisher: { "@id": PERSON_ID },
         inLanguage: "en",
+      },
+      {
+        "@type": "WebPage",
+        "@id": HOME_PAGE_ID,
+        url: SITE_URL,
+        name: PAGE_SEO.home.title,
+        description: PAGE_SEO.home.description,
+        isPartOf: { "@id": WEBSITE_ID },
+        about: { "@id": PERSON_ID },
+        primaryImageOfPage: { "@type": "ImageObject", url: OG_IMAGE_URL },
+        datePublished: SITE_PUBLISHED,
+        dateModified: SITE_MODIFIED,
+        inLanguage: "en",
+        // The page title and the intro section, the parts that read well
+        // aloud. Google only acts on this for some content types, but other
+        // voice and answer engines can use it.
+        speakable: {
+          "@type": "SpeakableSpecification",
+          cssSelector: ["h1", "main > section:nth-of-type(2) h2"],
+        },
       },
       {
         "@type": "Person",
@@ -123,6 +150,8 @@ export function getWorkStructuredData(work: IWork) {
         keywords: work.tags.join(", "),
         author: CREATOR,
         publisher: CREATOR,
+        datePublished: SITE_PUBLISHED,
+        dateModified: SITE_MODIFIED,
         isPartOf: { "@id": WEBSITE_ID },
         inLanguage: "en",
       },
@@ -158,7 +187,8 @@ const FIXED_PAGES = {
 } as const;
 
 // Page type plus breadcrumb for About, Services, Works and Contact, tied to
-// the same Person and service entities as the home page.
+// the same Person and service entities as the home page. The author is
+// restated in full (with sameAs) so each page reads on its own.
 export function getPageStructuredData(page: keyof typeof FIXED_PAGES) {
   const { type, path, crumb, about } = FIXED_PAGES[page];
   const url = getAbsoluteUrl(path);
@@ -172,6 +202,9 @@ export function getPageStructuredData(page: keyof typeof FIXED_PAGES) {
         name: PAGE_SEO[page].title,
         description: PAGE_SEO[page].description,
         about,
+        author: CREATOR,
+        datePublished: SITE_PUBLISHED,
+        dateModified: SITE_MODIFIED,
         ...(page === "works" && { mainEntity: getWorkItemList() }),
         ...(page === "services" && { mainEntity: getServiceItemList() }),
         isPartOf: { "@id": WEBSITE_ID },
@@ -196,6 +229,9 @@ function getWorkItemList() {
 
   return {
     "@type": "ItemList",
+    name: "Works by Ahmer Dock",
+    numberOfItems: published.length,
+    itemListOrder: "https://schema.org/ItemListUnordered",
     itemListElement: published.map((work, index) => ({
       "@type": "ListItem",
       position: index + 1,
@@ -208,6 +244,9 @@ function getWorkItemList() {
 function getServiceItemList() {
   return {
     "@type": "ItemList",
+    name: "Services by Ahmer Dock",
+    numberOfItems: SITE_SERVICES.length,
+    itemListOrder: "https://schema.org/ItemListOrderAscending",
     itemListElement: SITE_SERVICES.map((service, index) => ({
       "@type": "ListItem",
       position: index + 1,
