@@ -6,6 +6,7 @@ import { ReactNode } from "react";
 import { Analytics } from "@vercel/analytics/next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { CustomCursor, SmoothScroll } from "@/components";
+import { PAGE_SEO, SITE_NAME, SITE_URL } from "@/data/site";
 
 const bebasNeue = Bebas_Neue({
   variable: "--font-bebas-neue",
@@ -19,18 +20,16 @@ const dmSans = DM_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "Ahmer Dock | Full Stack Developer, React & Next.js",
-  description:
-    "Full stack developer helping founders turn ideas into fast, reliable web and mobile products, built end to end with React, Next.js, and Node.js.",
-  applicationName: "Ahmer Dock | Full Stack Developer, React & Next.js",
-  authors: [{ name: "ahmerdock" }],
+  title: PAGE_SEO.home.title,
+  description: PAGE_SEO.home.description,
+  applicationName: PAGE_SEO.home.title,
+  authors: [{ name: SITE_NAME, url: SITE_URL }],
   referrer: "origin-when-cross-origin",
-  creator: "ahmer",
-  publisher: "ahmerdock",
+  creator: SITE_NAME,
+  publisher: SITE_NAME,
   robots: {
     index: true,
     follow: true,
-    nocache: true,
     googleBot: {
       index: true,
       follow: true,
@@ -40,34 +39,30 @@ export const metadata: Metadata = {
       "max-snippet": -1,
     },
   },
-  metadataBase: new URL("https://ahmerdock.com/"),
+  metadataBase: new URL(SITE_URL),
+  // Pages restate their own title, description and image through
+  // buildPageMetadata, since Next replaces these two objects as a whole.
   openGraph: {
-    title: "Ahmer Dock | Full Stack Developer, React & Next.js",
-    description:
-      "Full stack developer helping founders turn ideas into fast, reliable web and mobile products, built end to end with React, Next.js, and Node.js.",
-    url: "https://ahmerdock.com/",
-    siteName: "Ahmer Dock | Full Stack Developer, React & Next.js",
+    title: PAGE_SEO.home.title,
+    description: PAGE_SEO.home.description,
+    url: "/",
+    siteName: SITE_NAME,
     images: [
       {
-        url: "/og-image.png",
+        url: "/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "Ahmer Dock | Full Stack Developer, React & Next.js",
+        alt: PAGE_SEO.home.title,
       },
     ],
-    locale: "en-US",
+    locale: "en_US",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Ahmer Dock | Full Stack Developer, React & Next.js",
-    description:
-      "Full stack developer helping founders turn ideas into fast, reliable web and mobile products, built end to end with React, Next.js, and Node.js.",
-    creator: "@ahmerdock",
-    images: {
-      url: "/og-image.png",
-      alt: "Ahmer Dock | Full Stack Developer, React & Next.js",
-    },
+    title: PAGE_SEO.home.title,
+    description: PAGE_SEO.home.description,
+    images: { url: "/og-image.jpg", alt: PAGE_SEO.home.title },
   },
 };
 

@@ -1,14 +1,21 @@
 import type { Metadata } from "next";
+import { JsonLd } from "@/components";
 import { ROUTES } from "@/constants/routes";
+import { PAGE_SEO } from "@/data/site";
+import { getPageStructuredData } from "@/data/structured-data";
 import { About } from "@/features";
+import { buildPageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "About | Ahmer Dock",
-  description:
-    "Full stack developer taking products from idea to launch across the frontend, the backend, and the app stores.",
-  alternates: { canonical: ROUTES.ABOUT },
-};
+export const metadata: Metadata = buildPageMetadata({
+  ...PAGE_SEO.about,
+  path: ROUTES.ABOUT,
+});
 
 export default function Page() {
-  return <About />;
+  return (
+    <>
+      <JsonLd data={getPageStructuredData("about")} />
+      <About />
+    </>
+  );
 }

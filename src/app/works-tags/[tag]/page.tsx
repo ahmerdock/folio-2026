@@ -3,6 +3,7 @@ import { redirect } from "next/navigation";
 import { ROUTES } from "@/constants/routes";
 import { getTagBySlug, getWorkByTag } from "@/data/work-tags";
 import { WorkTags } from "@/features";
+import { buildPageMetadata } from "@/lib/seo";
 
 interface IPageProps {
   params: Promise<{ tag: string }>;
@@ -15,12 +16,12 @@ export async function generateMetadata(props: IPageProps): Promise<Metadata> {
 
   // A tag page only re-lists projects that already have their own pages, so
   // it stays out of the index.
-  return {
+  return buildPageMetadata({
     title: `${tag} Work | Ahmer Dock`,
     description: `Products shipped by Ahmer Dock tagged ${tag}.`,
-    alternates: { canonical: `${ROUTES.WORKS_TAGS}/${slug}` },
-    robots: { index: false },
-  };
+    path: `${ROUTES.WORKS_TAGS}/${slug}`,
+    noIndex: true,
+  });
 }
 
 export default async function Page(props: IPageProps) {
