@@ -1,43 +1,48 @@
-import { FeedbackPlaceholderImg } from "@/assets/images";
+import {
+  Feedback1Img,
+  Feedback2Img,
+  Feedback3Img,
+  Feedback4Img,
+} from "@/assets/images";
 import { ITestimonial } from "./clients-feedback.interface";
 
 export const FEEDBACK_TITLE = "Clients Feedback";
 export const FEEDBACK_BADGE = "5 STAR SERVICES";
 export const FEEDBACK_STAR_COUNT = 5;
 
-// PLACEHOLDER testimonials, to be replaced with real ones.
+// The portraits are neutral stand-ins, not photos of the clients.
 export const TESTIMONIALS: ITestimonial[] = [
   {
     quote:
-      "Ahmer took our idea from a rough brief to a working product. Clear communication, steady progress, and no surprises along the way.",
-    name: "Client Name",
-    role: "Founder, Company Name",
+      "Ahmer built our mobile app, the admin portal and the live events board, and took over our cloud setup along the way. He owned everything he touched, explained every trade-off clearly, and got us into both app stores.",
+    name: "Patrik",
+    role: "Founder & CEO, Medieval Tech Inc.",
     dark: false,
-    image: FeedbackPlaceholderImg,
+    image: Feedback1Img,
   },
   {
     quote:
-      "Working with Ahmer felt like having a technical partner, not just a developer. He planned the build, shipped in milestones, and stayed after launch.",
-    name: "Client Name",
-    role: "Founder & CEO, Company Name",
+      "Ahmer is building our merchant app on his own, from sign-up to payment links, with Arabic and right-to-left support from the first build. He handles the releases too, so we never have to chase anything.",
+    name: "Mahmoud",
+    role: "Client, ATX Pay",
     dark: true,
-    image: FeedbackPlaceholderImg,
+    image: Feedback3Img,
   },
   {
     quote:
-      "The frontend feels fast and polished, and the backend has been rock solid since day one. Ahmer handled both without us having to chase anything.",
-    name: "Client Name",
-    role: "Co-Founder, Company Name",
+      "Ahmer built our whole coaching platform: the sales site, the coach dashboard, the admin panel and the API, with Stripe payments. He set up the server too, and it all felt like one product.",
+    name: "Muhammad Umer",
+    role: "Client, The Coaching App",
     dark: false,
-    image: FeedbackPlaceholderImg,
+    image: Feedback4Img,
   },
   {
     quote:
       "Ahmer owned the whole stack on our app and led the team around him. Having one person think through the product and the code made every release smoother.",
-    name: "Client Name",
+    name: "Qudisa",
     role: "Product Lead, Company Name",
     dark: true,
-    image: FeedbackPlaceholderImg,
+    image: Feedback2Img,
   },
 ];
 
