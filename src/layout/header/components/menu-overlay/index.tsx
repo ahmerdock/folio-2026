@@ -95,7 +95,7 @@ export default function MenuOverlay(props: IMenuOverlayProps) {
         </a>
 
         <div className="flex items-center gap-2 md:gap-3">
-          <SocialLinks label="Follow us" labelClassName="font-bold" />
+          <SocialLinks label="Follow me" labelClassName="font-bold" />
         </div>
 
         <a
