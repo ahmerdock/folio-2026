@@ -73,8 +73,11 @@ export default function useCustomButton(options: IUseCustomButtonOptions) {
 
     // Measured, not a fixed constant: the label's font size (and, for the
     // icon badge, its own size) changes across breakpoints/size variants,
-    // so a hardcoded offset would undershoot at other sizes.
-    const lineHeightPx = text1.getBoundingClientRect().height;
+    // so a hardcoded offset would undershoot at other sizes. Measured when
+    // the hover first plays (the tween values below are functions), not
+    // here: a button mounted inside a hidden tab panel has no layout yet and
+    // would measure zero.
+    const lineHeightPx = () => text1.getBoundingClientRect().height;
 
     const splitConfig = { type: "chars", charsClass: "char" } as const;
     const split1 = SplitText.create(text1, splitConfig);
@@ -152,7 +155,7 @@ export default function useCustomButton(options: IUseCustomButtonOptions) {
     tl.to(
       [...split1.chars, ...split2.chars],
       {
-        y: -lineHeightPx,
+        y: () => -lineHeightPx(),
         duration: d(CHAR_DURATION_S),
         stagger: { amount: d(STAGGER_AMOUNT_S) },
         ease: CHAR_EASE,
@@ -194,11 +197,11 @@ export default function useCustomButton(options: IUseCustomButtonOptions) {
       // real content extent regardless of the box's own computed width —
       // same reasoning already applied to the ticker rows in
       // use-cta-marquee.ts — so half of it is exactly one slot's width.
-      const iconSlotWidthPx = iconRow.scrollWidth / 2;
+      const iconSlotWidthPx = () => iconRow.scrollWidth / 2;
       tl.to(
         iconRow,
         {
-          x: -iconSlotWidthPx,
+          x: () => -iconSlotWidthPx(),
           duration: d(ICON_ROLL_DURATION_S),
           ease: ICON_ROLL_EASE,
         },

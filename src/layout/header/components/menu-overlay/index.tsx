@@ -74,16 +74,18 @@ export default function MenuOverlay(props: IMenuOverlayProps) {
           </button>
         </div>
 
-        <ul className="flex flex-col">
-          {MENU_NAV_LINKS.map(({ label, href }) => (
-            <MenuLink
-              key={label}
-              label={label}
-              href={href}
-              onNavigate={onClose}
-            />
-          ))}
-        </ul>
+        <nav aria-label="Primary">
+          <ul className="flex flex-col">
+            {MENU_NAV_LINKS.map(({ label, href }) => (
+              <MenuLink
+                key={label}
+                label={label}
+                href={href}
+                onNavigate={onClose}
+              />
+            ))}
+          </ul>
+        </nav>
       </div>
 
       <div className="flex flex-wrap items-center justify-center gap-4 px-15 py-10 md:grid md:grid-cols-[1fr_auto_1fr]">

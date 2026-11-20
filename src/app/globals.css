@@ -182,6 +182,14 @@
   cursor: none;
 }
 
+/* Text fields keep the system cursor, so typing still shows the I-beam. */
+.has-custom-cursor input,
+.has-custom-cursor textarea,
+.has-custom-cursor select,
+.has-custom-cursor [contenteditable="true"] {
+  cursor: auto;
+}
+
 .cursor-dot {
   display: none;
 }

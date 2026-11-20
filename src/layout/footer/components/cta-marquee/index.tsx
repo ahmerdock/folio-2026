@@ -36,7 +36,11 @@ export default function CtaMarquee() {
         ))}
       </div>
 
-      <div ref={row2Ref} className="flex w-max whitespace-nowrap opacity-50">
+      <div
+        ref={row2Ref}
+        aria-hidden
+        className="flex w-max whitespace-nowrap opacity-50"
+      >
         {TICKER_COPIES.map((_, i) => (
           <h2
             key={i}
