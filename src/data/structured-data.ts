@@ -38,6 +38,7 @@ const CREATOR = {
   name: SITE_NAME,
   jobTitle: SITE_ROLE,
   url: SITE_URL,
+  image: OG_IMAGE_URL,
   sameAs: SITE_PROFILE_URLS,
 };
 
