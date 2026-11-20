@@ -1,12 +1,12 @@
-import { FeaturedWork4Img } from "@/assets/images";
 import {
   AgenticFeaturedImg,
   AgenticListImg,
   AmmaFeaturedImg,
   AmmaListImg,
+  AtxFeaturedImg,
+  AtxListImg,
   CoachingFeaturedImg,
   CoachingListImg,
-  Work4ListImg,
   Work5ListImg,
   Work6ListImg,
 } from "@/assets/works";
@@ -57,16 +57,16 @@ export const WORKS: IWork[] = [
     imagePaneColor: "#4a1fa0",
   },
   {
-    slug: "plenova-web-design-development",
-    title: "Plenova Web Design & Development",
+    slug: "atx-pay",
+    title: "ATX Pay",
     description:
-      "Plenova Web Design & Development builds modern, high-performing websites with clean UX, custom features, responsive layouts, and seamless functionality crafted to elevate brands",
-    tags: ["Frontend", "Web", "Mobile"],
-    listImage: Work4ListImg,
+      "ATX Pay is a crypto payments platform for UAE merchants, who accept crypto in store and online and settle in AED. I am building and shipping its mobile app for iOS and Android, in English and Arabic.",
+    tags: ["Mobile", "Frontend", "DevOps"],
+    listImage: AtxListImg,
     featured: true,
-    featuredImage: FeaturedWork4Img,
-    paneColor: "#2f3410",
-    imagePaneColor: "#55601a",
+    featuredImage: AtxFeaturedImg,
+    paneColor: "#14284f",
+    imagePaneColor: "#1f4a9a",
   },
   {
     slug: "placeholder-project-five",

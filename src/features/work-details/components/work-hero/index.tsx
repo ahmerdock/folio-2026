@@ -9,7 +9,7 @@ import { IWorkHeroProps } from "./work-hero.interface";
 import { BODY_TEXT_CLASS } from "../../work-details.data";
 
 export default function WorkHero(props: IWorkHeroProps) {
-  const { title, tags, meta, links, stack } = props;
+  const { title, tags, meta, links, stack, status } = props;
   const sectionRef = useRef<HTMLElement>(null);
   useTitleReveal(sectionRef);
 
@@ -20,7 +20,14 @@ export default function WorkHero(props: IWorkHeroProps) {
     >
       <div className="mx-auto w-full max-w-420">
         <div className="mb-5 flex flex-col gap-6 md:mb-6 lg:mb-10">
-          <TagList tags={tags} />
+          <div className="flex flex-wrap items-center gap-3">
+            <TagList tags={tags} />
+            {status && (
+              <span className="rounded-full bg-lime px-4 py-1.5 text-sm leading-none font-semibold text-black-secondary uppercase lg:px-5 lg:py-2 lg:text-base">
+                {status}
+              </span>
+            )}
+          </div>
           <h1
             data-title
             className="text-[clamp(2.75rem,1.4757rem+5.4369vw,5rem)] leading-none font-normal tracking-[0.01em] uppercase"

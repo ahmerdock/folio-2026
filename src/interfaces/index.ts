@@ -54,6 +54,8 @@ export interface IWorkDetails {
   // The technologies the project was built with, shown as chips under the
   // facts.
   stack?: string[];
+  // A short marker beside the tags, for a project that is not live yet.
+  status?: string;
   bannerImage: StaticImageData;
   challenge: { title: string; lead: string; text: string };
   showcaseImages: [StaticImageData, StaticImageData];

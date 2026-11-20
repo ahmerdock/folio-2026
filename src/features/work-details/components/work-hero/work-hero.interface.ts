@@ -6,4 +6,5 @@ export interface IWorkHeroProps {
   meta: IWorkDetails["meta"];
   links?: IWorkDetails["links"];
   stack?: IWorkDetails["stack"];
+  status?: IWorkDetails["status"];
 }

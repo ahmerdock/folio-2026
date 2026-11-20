@@ -35,6 +35,7 @@ export default function WorkDetails(props: IWorkDetailsProps) {
         meta={details.meta}
         links={details.links}
         stack={details.stack}
+        status={details.status}
       />
       <FluidImage
         image={details.bannerImage}
