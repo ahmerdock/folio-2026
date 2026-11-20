@@ -1,13 +1,11 @@
+import { FeaturedWork4Img } from "@/assets/images";
 import {
-  FeaturedWork3Img,
-  FeaturedWork4Img,
-} from "@/assets/images";
-import {
+  AgenticFeaturedImg,
+  AgenticListImg,
   AmmaFeaturedImg,
   AmmaListImg,
   CoachingFeaturedImg,
   CoachingListImg,
-  Work3ListImg,
   Work4ListImg,
   Work5ListImg,
   Work6ListImg,
@@ -35,6 +33,18 @@ export const WORKS: IWork[] = [
     imagePaneColor: "#8f2a30",
   },
   {
+    slug: "agentic-creed",
+    title: "Agentic Creed",
+    description:
+      "Agentic Creed, formerly Air Apple Cart, is an all-in-one AI CRM platform for sales, marketing, services and operations. I led the frontend team that built its Services, Operations and Loyalty modules, including the live chat.",
+    tags: ["Frontend", "Leadership", "Web"],
+    listImage: AgenticListImg,
+    featured: true,
+    featuredImage: AgenticFeaturedImg,
+    paneColor: "#10343a",
+    imagePaneColor: "#1a5560",
+  },
+  {
     slug: "the-coaching-app",
     title: "The Coaching App",
     description:
@@ -45,18 +55,6 @@ export const WORKS: IWork[] = [
     featuredImage: CoachingFeaturedImg,
     paneColor: "#2a1659",
     imagePaneColor: "#4a1fa0",
-  },
-  {
-    slug: "packaging-design-on-demand-experts",
-    title: "Packaging Design with On-Demand Experts",
-    description:
-      "Packaging Design with On-Demand Experts delivers tailored, high-quality packaging solutions created by skilled specialists who craft standout visuals, smart layouts",
-    tags: ["Backend", "APIs", "Leadership"],
-    listImage: Work3ListImg,
-    featured: true,
-    featuredImage: FeaturedWork3Img,
-    paneColor: "#10343a",
-    imagePaneColor: "#1a5560",
   },
   {
     slug: "plenova-web-design-development",
