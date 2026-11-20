@@ -7,7 +7,7 @@ import {
   WORKS_PERSPECTIVE_PX,
   WORKS_PIN_TOP,
   WORKS_TITLE,
-  WORKS_TRACK_HEIGHT_VH,
+  getWorksTrackHeightVh,
 } from "./featured-works.data";
 import useFeaturedWorks from "./use-featured-works";
 import { FEATURED_WORKS } from "@/data/works";
@@ -49,7 +49,7 @@ export default function FeaturedWorks() {
           className="motion-safe:md:h-(--works-track-h)"
           style={
             {
-              "--works-track-h": `${WORKS_TRACK_HEIGHT_VH}vh`,
+              "--works-track-h": `${getWorksTrackHeightVh(FEATURED_WORKS.length)}vh`,
               "--works-pin-top": WORKS_PIN_TOP,
               "--works-perspective": `${WORKS_PERSPECTIVE_PX}px`,
             } as CSSProperties

@@ -7,8 +7,8 @@ import {
   AtxListImg,
   CoachingFeaturedImg,
   CoachingListImg,
-  Work5ListImg,
-  Work6ListImg,
+  PaySliceFeaturedImg,
+  PaySliceListImg,
 } from "@/assets/works";
 import { ROUTES } from "@/constants/routes";
 import { IFeaturedWork, IWork } from "@/interfaces";
@@ -18,7 +18,6 @@ export const MAX_FEATURED_WORK = 5;
 // Every project, in the order they were added. The works page shows them in a
 // random order on each visit; the home page's stack shows the featured ones in
 // this order.
-// PLACEHOLDER copy, tags and images, to be replaced with real content.
 export const WORKS: IWork[] = [
   {
     slug: "armored-mma-cage-calls",
@@ -69,22 +68,16 @@ export const WORKS: IWork[] = [
     imagePaneColor: "#1f4a9a",
   },
   {
-    slug: "placeholder-project-five",
-    title: "Placeholder Project Five",
+    slug: "pay-slice",
+    title: "Pay Slice",
     description:
-      "A placeholder project that appears on the works page only, to show how the list grows and staggers.",
-    tags: ["Backend", "APIs"],
-    listImage: Work5ListImg,
-    featured: false,
-  },
-  {
-    slug: "placeholder-project-six",
-    title: "Placeholder Project Six",
-    description:
-      "A second placeholder project that appears on the works page only, to show how the list grows and staggers.",
-    tags: ["Mobile", "Leadership"],
-    listImage: Work6ListImg,
-    featured: false,
+      "Pay Slice is a budget planner for Android that splits your monthly income into percentage-based categories. I designed, built and published it, and your budget stays on your phone.",
+    tags: ["Mobile", "Frontend", "Product"],
+    listImage: PaySliceListImg,
+    featured: true,
+    featuredImage: PaySliceFeaturedImg,
+    paneColor: "#0f3a2b",
+    imagePaneColor: "#1b7556",
   },
 ];
 
