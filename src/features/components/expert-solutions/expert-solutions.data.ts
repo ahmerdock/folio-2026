@@ -6,7 +6,7 @@ export const EXPERT_TAGS_LABEL = "Services included:";
 
 // Videos and their poster frames are served from public/videos: Turbopack
 // can't import .mp4 files.
-// Tags follow the resume. The videos are still PLACEHOLDERS, to be replaced.
+// Tags follow the resume.
 export const EXPERT_SOLUTIONS: IExpertSolution[] = [
   {
     title: "FRONTEND ENGINEERING",

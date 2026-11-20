@@ -21,7 +21,7 @@ export const TRUSTED_CTA_HREF = ROUTES.CONTACT;
 // The project logos around the wheel, in this order, one every
 // TRUSTED_STEP_DEG degrees.
 // Medieval Tech, AMMA, Agentic Creed, ATX, The Coaching App, then my three own
-// apps. PLACEHOLDER: slots 9 and 10 are dummy logos, to be replaced later.
+// apps and two more logos.
 export const TRUSTED_IMAGES = [
   Trusted1Img,
   Trusted2Img,

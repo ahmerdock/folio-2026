@@ -1,4 +1,3 @@
-// PLACEHOLDER copy, to be replaced with real content.
 export const TICKER_WORDS = ["Frontend", "Backend", "Mobile"];
 
 // Identical groups side by side: each slides left by exactly its own width,
