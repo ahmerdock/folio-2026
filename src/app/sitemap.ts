@@ -3,24 +3,29 @@ import { ROUTES } from "@/constants/routes";
 import { SITEMAP_STATIC_ROUTES, getAbsoluteUrl } from "@/data/site";
 import { APP_POLICIES } from "@/data/privacy-policies";
 import { WORK_DETAIL_SLUGS } from "@/data/work-details";
+import { SITE_MODIFIED } from "@/data/structured-data";
 import { getWorkHref } from "@/data/works";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const projects = WORK_DETAIL_SLUGS.map((slug) => ({
     url: getAbsoluteUrl(getWorkHref(slug)),
+    lastModified: SITE_MODIFIED,
     changeFrequency: "yearly" as const,
     priority: 0.7,
   }));
 
   const pages = SITEMAP_STATIC_ROUTES.map((path) => ({
     url: getAbsoluteUrl(path),
+    // The privacy index was not part of the content updates.
+    ...(path !== ROUTES.APPS_PRIVACY && { lastModified: SITE_MODIFIED }),
     changeFrequency:
       path === ROUTES.HOME ? ("monthly" as const) : ("yearly" as const),
     priority:
       path === ROUTES.HOME ? 1 : path === ROUTES.APPS_PRIVACY ? 0.3 : 0.8,
   }));
 
-  // The store listings link to these, so they are public; low priority.
+  // The store listings link to these, so they are public; low priority. No
+  // lastModified: their text was not part of the content updates.
   const policies = APP_POLICIES.map(({ slug }) => ({
     url: getAbsoluteUrl(`${ROUTES.APPS_PRIVACY}/${slug}`),
     changeFrequency: "yearly" as const,

@@ -28,7 +28,7 @@ const HOME_PAGE_ID = `${SITE_URL}/#webpage`;
 // when the content changes: it is a recency signal for search engines and AI
 // answers, so it should not drift from the truth.
 const SITE_PUBLISHED = "2026-11-20";
-const SITE_MODIFIED = "2026-11-20";
+export const SITE_MODIFIED = "2026-11-20";
 
 // The same person as on the home page, restated with a name so a project page
 // still reads on its own.
