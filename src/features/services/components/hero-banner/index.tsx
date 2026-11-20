@@ -46,11 +46,11 @@ export default function HeroBanner() {
           className="max-w-[28ch] text-[clamp(2.75rem,1.4757rem+5.4369vw,5rem)] leading-none font-normal tracking-[0.01em] uppercase"
         >
           {HERO_TITLE_FIRST_LINE} <br aria-hidden className="hidden lg:block" />
-          {HERO_TITLE_BEFORE}
+          {HERO_TITLE_BEFORE}{" "}
           <span
             data-hero-image
             aria-hidden
-            className="mx-1 inline-block aspect-95/44 w-18.75 overflow-hidden rounded-full align-middle sm:w-22.5 md:w-27.5 lg:mx-2 lg:w-37.5 2xl:w-52.5"
+            className="mr-[0.155em] inline-block aspect-95/44 w-18.75 overflow-hidden rounded-full align-middle sm:w-22.5 md:w-27.5 lg:w-37.5 2xl:w-52.5"
           >
             <Image
               src={ServicesHeaderImg}

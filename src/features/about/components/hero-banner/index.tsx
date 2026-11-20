@@ -40,11 +40,11 @@ export default function HeroBanner() {
           ref={titleRef}
           className="my-6 max-w-[32ch] text-[clamp(2.75rem,1.4757rem+5.4369vw,5rem)] leading-none font-normal tracking-[0.01em] uppercase sm:my-8 md:my-9 lg:my-12"
         >
-          {HERO_TITLE_BEFORE}
+          {HERO_TITLE_BEFORE}{" "}
           <span
             data-hero-image
             aria-hidden
-            className="mx-1 inline-block aspect-95/44 w-18.75 overflow-hidden rounded-full align-middle sm:w-22.5 md:w-27.5 lg:mx-2 lg:w-37.5 2xl:w-52.5"
+            className="inline-block aspect-95/44 w-18.75 overflow-hidden rounded-full align-middle sm:w-22.5 md:w-27.5 lg:w-37.5 2xl:w-52.5"
           >
             <Image
               src={AboutHeaderImg}
@@ -53,6 +53,7 @@ export default function HeroBanner() {
               className="size-full object-cover"
             />
           </span>
+          {" "}
           {HERO_TITLE_AFTER}
         </h1>
 
