@@ -70,13 +70,6 @@ export function getHomeStructuredData() {
         datePublished: SITE_PUBLISHED,
         dateModified: SITE_MODIFIED,
         inLanguage: "en",
-        // The page title and the intro section, the parts that read well
-        // aloud. Google only acts on this for some content types, but other
-        // voice and answer engines can use it.
-        speakable: {
-          "@type": "SpeakableSpecification",
-          cssSelector: ["h1", "main > section:nth-of-type(2) h2"],
-        },
       },
       {
         "@type": "Person",
