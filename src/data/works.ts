@@ -1,12 +1,12 @@
 import {
-  FeaturedWork2Img,
   FeaturedWork3Img,
   FeaturedWork4Img,
 } from "@/assets/images";
 import {
   AmmaFeaturedImg,
   AmmaListImg,
-  Work2ListImg,
+  CoachingFeaturedImg,
+  CoachingListImg,
   Work3ListImg,
   Work4ListImg,
   Work5ListImg,
@@ -35,16 +35,16 @@ export const WORKS: IWork[] = [
     imagePaneColor: "#8f2a30",
   },
   {
-    slug: "push-past-pack-design",
-    title: "Push Past Pack Design in New Style",
+    slug: "the-coaching-app",
+    title: "The Coaching App",
     description:
-      "Push Past Pack Design in New Style delivers bold, modern packaging concepts that redefine visuals, elevate branding, and introduce fresh creative energy.",
-    tags: ["Frontend", "Mobile", "Leadership"],
-    listImage: Work2ListImg,
+      "The Coaching App is a gym platform where coaches track their clients' progress. I built the sales site, the coach dashboard, the admin panel and the API behind them, with Stripe payments.",
+    tags: ["Full Stack", "Web", "Backend"],
+    listImage: CoachingListImg,
     featured: true,
-    featuredImage: FeaturedWork2Img,
-    paneColor: "#4a2412",
-    imagePaneColor: "#8a3f17",
+    featuredImage: CoachingFeaturedImg,
+    paneColor: "#2a1659",
+    imagePaneColor: "#4a1fa0",
   },
   {
     slug: "packaging-design-on-demand-experts",
@@ -55,8 +55,8 @@ export const WORKS: IWork[] = [
     listImage: Work3ListImg,
     featured: true,
     featuredImage: FeaturedWork3Img,
-    paneColor: "#231d4a",
-    imagePaneColor: "#3a2f8f",
+    paneColor: "#10343a",
+    imagePaneColor: "#1a5560",
   },
   {
     slug: "plenova-web-design-development",
