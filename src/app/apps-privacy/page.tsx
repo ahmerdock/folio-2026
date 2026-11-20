@@ -1,13 +1,13 @@
 import type { Metadata } from "next";
 import { ROUTES } from "@/constants/routes";
+import { PAGE_SEO } from "@/data/site";
 import { AppsPrivacy } from "@/features";
+import { buildPageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "App Privacy Policies | Ahmer Dock",
-  description:
-    "Privacy policies for the apps I publish: Pay Slice, Couch Beam and Simpli Noti.",
-  alternates: { canonical: ROUTES.APPS_PRIVACY },
-};
+export const metadata: Metadata = buildPageMetadata({
+  ...PAGE_SEO.appsPrivacy,
+  path: ROUTES.APPS_PRIVACY,
+});
 
 export default function Page() {
   return <AppsPrivacy />;

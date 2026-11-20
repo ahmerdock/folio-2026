@@ -16,7 +16,9 @@ export { PrivacyPolicyPage } from "./components";
 
 export default function AppsPrivacy() {
   return (
-    <main className="relative min-h-dvh overflow-clip px-[5%] pt-32 pb-16 sm:pb-20 md:pt-40 md:pb-28 lg:pb-32">
+    <main
+      id="main-content"
+      className="relative min-h-dvh overflow-clip px-[5%] pt-32 pb-16 sm:pb-20 md:pt-40 md:pb-28 lg:pb-32">
       <div className="mx-auto w-full max-w-[1680px]">
         <header className="flex flex-col gap-6">
           <Caption

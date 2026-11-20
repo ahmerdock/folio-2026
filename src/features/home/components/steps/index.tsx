@@ -8,10 +8,13 @@ export default function Steps() {
   const { headerRef, titleRef, subtitleRef } = useSteps();
 
   return (
-    <section className="rounded-[100px] bg-mist py-37.5 text-white-secondary">
+    <section className="rounded-4xl bg-mist py-16 text-white-secondary sm:rounded-[40px] sm:py-20 md:rounded-[60px] md:py-25 lg:rounded-[100px] lg:py-37.5">
       <div className="px-[5%]">
         <div className="mx-auto w-full max-w-420">
-          <header ref={headerRef} className="mb-20 text-center">
+          <header
+            ref={headerRef}
+            className="mb-8 text-center sm:mb-11 md:mb-13 lg:mb-20"
+          >
             <h2
               ref={titleRef}
               className="mb-3 text-(length:--_typography---font-sizes--heading--h4) leading-none font-normal tracking-[-0.01em] uppercase"
@@ -20,7 +23,7 @@ export default function Steps() {
             </h2>
             <p
               ref={subtitleRef}
-              className="text-xl leading-[1.4] text-charcoal"
+              className="text-base leading-[1.4] text-charcoal lg:text-xl"
             >
               {STEPS_SUBTITLE}
             </p>

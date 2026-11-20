@@ -2,7 +2,12 @@ import { ComponentType, SVGProps } from "react";
 
 export interface ICustomButton {
   label: string;
-  href: string;
+  // A link when given; without one the button renders as a real <button>
+  // (e.g. a form's submit).
+  href?: string;
+  // Only for the <button> form.
+  type?: "button" | "submit";
+  disabled?: boolean;
   target?: "_self" | "_blank" | "_parent" | "_top";
   className?: string;
   // Trailing icon badge (e.g. ArrowIcon) — omitted by default. Passed as a
@@ -10,7 +15,7 @@ export interface ICustomButton {
   // twice internally for the hover roll, same convention SOCIAL_LINKS
   // already uses for its own Icon prop (src/constants/index.ts).
   icon?: ComponentType<SVGProps<SVGSVGElement>>;
-  // Rest state is already filled (bg-rose-light by default, override via
+  // Rest state is already filled (bg-lime by default, override via
   // className) with no hover fill/dash-color/text-color transition — for
   // contexts like the 404 marquee CTA where the reference button has no
   // :hover background change at all. Default (false) keeps today's
@@ -28,4 +33,8 @@ export interface ICustomButton {
   // outline changes: the dash and label text colours are set separately and
   // are not affected.
   borderColor?: string;
+  // Tailwind text colour class for the label (e.g. "text-background").
+  // Defaults to text-white-secondary. Only meant for `filled` buttons: the
+  // non-filled hover animates the label colour inline and would override it.
+  labelClassName?: string;
 }

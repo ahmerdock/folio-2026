@@ -54,6 +54,7 @@ export default function CtaMarquee() {
           icon={ArrowIcon}
           filled
           size="lg"
+          labelClassName="text-background"
         />
       </div>
     </section>

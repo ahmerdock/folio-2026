@@ -1,13 +1,31 @@
-import { AboutMe, FeaturedWorks, Hero, Progress, Steps } from "./components";
+import {
+  ClientsFeedback,
+  ExpertSolutions,
+  Quotes,
+  TrustedFounders,
+} from "@/features/components";
+import {
+  AboutMe,
+  FeaturedWorks,
+  Hero,
+  PlayReel,
+  Progress,
+  Steps,
+} from "./components";
 
 export default function Home() {
   return (
-    <main>
+    <main id="main-content">
       <Hero />
       <AboutMe />
-      {/* <Progress />
+      <Progress />
       <Steps />
-      <FeaturedWorks /> */}
+      <FeaturedWorks />
+      <Quotes />
+      <ExpertSolutions />
+      <PlayReel />
+      <TrustedFounders />
+      <ClientsFeedback />
     </main>
   );
 }

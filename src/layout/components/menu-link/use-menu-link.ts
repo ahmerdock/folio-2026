@@ -39,7 +39,7 @@ export default function useMenuLink(hasIndex: boolean, isActive: boolean) {
     const split2 = SplitText.create(text2, splitConfig);
 
     // Index number is only present for callers that pass `index` (e.g. the
-    // footer nav) — split it alongside the label only when it's rendered, so
+    // footer nav): split it alongside the label only when it's rendered, so
     // non-indexed callers (e.g. the header overlay) never touch null refs.
     const splitIndex1 =
       hasIndex && indexText1 ? SplitText.create(indexText1, splitConfig) : null;
@@ -74,7 +74,7 @@ export default function useMenuLink(hasIndex: boolean, isActive: boolean) {
       )
       // Layer 2b: enter copy, resting further than one box-height below
       // (ENTER_REST_TOP_PERCENT) to clear this tight line-height's glyph
-      // overshoot — travel matches that same percentage so it lands exactly
+      // overshoot: travel matches that same percentage so it lands exactly
       // in the vacated slot. No separate color tween needed: text1/text2
       // carry static idle/active colors, so swapping which copy is visible
       // is the color flip. The index number, when present, mirrors the same
@@ -93,25 +93,31 @@ export default function useMenuLink(hasIndex: boolean, isActive: boolean) {
     tlRef.current = tl;
 
     return () => {
-      tl.kill();
+      // revert(), not kill(): kill() leaves the inline transform/opacity the
+      // timeline wrote (e.g. when an active link was jumped to progress(1)).
+      // A rebuilt timeline (StrictMode's double effect run, Fast Refresh) would
+      // then capture that end state as its start, and could never reset it.
+      tl.revert();
       tlRef.current = null;
       split1.revert();
       split2.revert();
       splitIndex1?.revert();
       splitIndex2?.revert();
     };
-  }, []);
+  }, [hasIndex]);
 
   // Active route: hold the timeline at its hover-end state instead of
   // playing/reversing into it, so the current page's link permanently shows
   // the same UI a hover would produce. `.progress()` jumps there directly
-  // (no easing), so this is instant on mount and on route change alike — it
+  // (no easing), so this is instant on mount and on route change alike: it
   // only re-runs when `isActive` itself flips, not on every render.
   useIsomorphicLayoutEffect(() => {
-    tlRef.current?.progress(isActive ? 1 : 0);
+    // pause() too: a hover's play() un-pauses the timeline, and progress()
+    // alone doesn't re-pause it: a reset to 0 would just play forward again.
+    tlRef.current?.pause().progress(isActive ? 1 : 0);
   }, [isActive]);
 
-  // While active, hover/focus must do nothing — the link is already showing
+  // While active, hover/focus must do nothing: the link is already showing
   // the "hovered" look permanently, so there's no state left to animate into
   // or out of.
   const onMouseEnter = () => {

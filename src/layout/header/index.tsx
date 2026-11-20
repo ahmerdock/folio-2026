@@ -3,18 +3,19 @@
 import Link from "next/link";
 import { BRAND_HREF, HEADER_ROOT_CLASS, NAV_LINKS } from "./header.data";
 import { BRAND_TEXT } from "@/constants";
+import { cn } from "@/lib";
 import { Hamburger, MenuOverlay, NavLink, useMenuOverlay } from "./components";
 import useHeader from "./use-header";
 
 export default function Header() {
-  const { headerRef } = useHeader();
   const { phase, panelRef, toggle, close } = useMenuOverlay();
+  const { headerRef } = useHeader(phase !== "closed");
 
   return (
     <>
       <header
         ref={headerRef}
-        className={`${HEADER_ROOT_CLASS} fixed inset-x-0 top-0 z-99`}
+        className={cn(HEADER_ROOT_CLASS, "fixed inset-x-0 top-0 z-99")}
       >
         <nav
           aria-label="Primary"

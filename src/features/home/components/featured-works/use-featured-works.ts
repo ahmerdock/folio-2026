@@ -9,10 +9,10 @@ import {
 import {
   WORKS_PEEL_ROTATE_X_DEG,
   WORKS_PEEL_Y_PERCENT,
-  WORKS_STACK_INITIAL,
+  getStackInitial,
+  getTimelineSteps,
   WORKS_STEP_DURATION_S,
   WORKS_STEP_EASE,
-  WORKS_TIMELINE_STEPS,
   WORKS_BADGE_REVEAL_DURATION_S,
   WORKS_BADGE_REVEAL_EASE,
   WORKS_BADGE_REVEAL_FROM_SCALE,
@@ -102,14 +102,15 @@ export default function useFeaturedWorks() {
       // Resting offsets, applied immediately so the cards behind the front
       // one show as strips from the start.
       cards.forEach((card, i) => {
-        const { y, scale } = WORKS_STACK_INITIAL[i];
+        const { y, scale } = getStackInitial(i);
         gsap.set(card, { y, scale });
       });
 
+      const steps = getTimelineSteps(cards.length);
       const tl = gsap.timeline({ defaults: { ease: WORKS_STEP_EASE } });
       const step = { duration: WORKS_STEP_DURATION_S };
 
-      WORKS_TIMELINE_STEPS.forEach(({ at, peel, forward }) => {
+      steps.forEach(({ at, peel, forward }) => {
         tl.to(
           cards[peel],
           {
@@ -131,7 +132,7 @@ export default function useFeaturedWorks() {
       let currentFront = -1;
       const setFront = (progress: number) => {
         const time = progress * totalS;
-        const front = WORKS_TIMELINE_STEPS.filter(
+        const front = steps.filter(
           ({ at }) => time >= at + WORKS_STEP_DURATION_S / 2,
         ).length;
         if (front === currentFront) return;

@@ -1,4 +1,4 @@
-import { LinkedinIcon, WhatsappIcon } from "@/assets/icons";
+import { GithubIcon, LinkedinIcon, WhatsappIcon } from "@/assets/icons";
 import { INavLink, ISocialLink } from "@/interfaces";
 import { ROUTES } from "./routes";
 
@@ -25,6 +25,11 @@ export const SOCIAL_LINKS: ISocialLink[] = [
     label: "LinkedIn",
     href: "https://www.linkedin.com/in/ahmerdock/",
     Icon: LinkedinIcon,
+  },
+  {
+    label: "GitHub",
+    href: "https://github.com/ahmerdock",
+    Icon: GithubIcon,
   },
 ];
 
